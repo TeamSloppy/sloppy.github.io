@@ -59,7 +59,7 @@ function App() {
             <div className="hud-element" style={{ position: 'absolute', top: '-40px', left: '-20px', color: 'var(--accent-cyan)', fontSize: '0.75rem', opacity: 0.8 }}>LOC: 45.92.11.0 // STATUS: ONLINE</div>
             <div className="hud-element" style={{ position: 'absolute', top: '20px', right: '-40px', color: 'var(--accent-pink)', fontSize: '0.75rem', opacity: 0.8, writingMode: 'vertical-rl' }}>PWR_LEVEL: 98%</div>
 
-            <div className="badge animate-fade-up">[ SYS.UPDATE // SLOPPY ECOSYSTEM V2.0 ]</div>
+            <div className="badge animate-fade-up">[ SYS.UPDATE // SLOPPY ECOSYSTEM V0.1.0 ]</div>
             <h1 className="hero-title animate-fade-up delay-100">
               <span className="text-gradient">Agentic Ecosystem</span><br />
               [ FOR_MODERN_TEAMS ]
