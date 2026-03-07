@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import soLogo from './assets/so_logo.svg'
 import './App.css'
+import { NotFoundPage } from './components/NotFoundPage'
 
 function App() {
   // Simple intersection observer for scroll animations
@@ -24,6 +25,11 @@ function App() {
     return () => observer.disconnect()
   }, [])
 
+  const isHome = window.location.pathname === '/' || window.location.pathname === '/index.html'
+  if (!isHome) {
+    return <NotFoundPage />
+  }
+
   return (
     <div className="app-wrapper">
       <div className="glow-bg"></div>
@@ -41,7 +47,7 @@ function App() {
             <a href="https://github.com/TeamSloppy/Sloppy" target="_blank" rel="noreferrer" className="nav-link">[ GitHub ↗ ]</a>
           </div>
           <div className="nav-actions">
-            <button className="btn btn-primary">[ Initialize ]</button>
+            <button className="btn btn-primary hover-levitate">[ Initialize ]</button>
           </div>
         </div>
       </nav>
@@ -63,14 +69,14 @@ function App() {
               Root terminal access to your autonomous workflows.
             </p>
             <div className="hero-cta animate-fade-up delay-300">
-              <button className="btn btn-primary btn-large hover-lift">[ DEPLOY_AGENTS ]</button>
-              <button className="btn btn-secondary btn-large hover-lift">[ READ_DOCS ]</button>
+              <button className="btn btn-primary btn-large hover-levitate">[ DEPLOY_AGENTS ]</button>
+              <button className="btn btn-secondary btn-large hover-levitate">[ READ_DOCS ]</button>
             </div>
           </div>
 
           {/* Mockup / Dashboard Preview */}
           <div className="hero-image-wrapper animate-fade-up delay-300">
-            <div className="hero-image glass hover-lift">
+            <div className="hero-image glass hover-levitate">
               <div className="window-controls">
                 <span></span><span></span><span></span>
               </div>
@@ -107,7 +113,7 @@ function App() {
               { title: "Instant Deployment", desc: "Push your agents to production with a single click.", icon: "rocket_launch" },
               { title: "Secure by Design", desc: "Enterprise-grade security and access controls built-in.", icon: "shield" }
             ].map((feature, i) => (
-              <div key={i} className="feature-card glass hover-lift scroll-animate" style={{ animationDelay: `${(i % 3) * 100}ms` }}>
+              <div key={i} className="feature-card glass hover-levitate scroll-animate" style={{ animationDelay: `${(i % 3) * 100}ms` }}>
                 <div className="feature-icon-wrapper">
                   <span className="material-symbols-rounded">{feature.icon}</span>
                 </div>

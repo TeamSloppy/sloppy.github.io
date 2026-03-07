@@ -161,12 +161,11 @@ ul {
   animation-delay: 300ms;
 }
 
-/* Dynamic Interactivity Utilities */
-.hover-lift {
-  transition: transform 0.1s steps(2), box-shadow 0.1s steps(2), background-color 0.1s steps(2);
+.hover-levitate {
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease, background-color 120ms ease !important;
 }
 
-.hover-lift:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 4px 4px 0px var(--accent-primary);
+.hover-levitate:hover:not(:disabled) {
+  transform: translate(-4px, -4px) !important;
+  box-shadow: 4px 4px 0px var(--accent-primary) !important;
 }
