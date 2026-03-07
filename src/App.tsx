@@ -36,12 +36,12 @@ function App() {
             <span className="logo-text">Sloppy</span>
           </div>
           <div className="nav-links">
-            <a href="#features" className="nav-link">Features</a>
-            <a href="#docs" className="nav-link">Docs</a>
-            <a href="https://github.com/TeamSloppy/Sloppy" target="_blank" rel="noreferrer" className="nav-link">GitHub</a>
+            <a href="#features" className="nav-link">[ Features ↗ ]</a>
+            <a href="#docs" className="nav-link">[ Docs ↗ ]</a>
+            <a href="https://github.com/TeamSloppy/Sloppy" target="_blank" rel="noreferrer" className="nav-link">[ GitHub ↗ ]</a>
           </div>
           <div className="nav-actions">
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn btn-primary">[ Initialize ]</button>
           </div>
         </div>
       </nav>
@@ -49,19 +49,22 @@ function App() {
       {/* Hero Section */}
       <main>
         <section className="hero container">
-          <div className="hero-content">
-            <div className="badge animate-fade-up">Introducing Sloppy Agentic Ecosystem</div>
+          <div className="hero-content" style={{ position: 'relative' }}>
+            <div className="hud-element" style={{ position: 'absolute', top: '-40px', left: '-20px', color: 'var(--accent-cyan)', fontSize: '0.75rem', opacity: 0.8 }}>LOC: 45.92.11.0 // STATUS: ONLINE</div>
+            <div className="hud-element" style={{ position: 'absolute', top: '20px', right: '-40px', color: 'var(--accent-pink)', fontSize: '0.75rem', opacity: 0.8, writingMode: 'vertical-rl' }}>PWR_LEVEL: 98%</div>
+
+            <div className="badge animate-fade-up">[ SYS.UPDATE // SLOPPY ECOSYSTEM V2.0 ]</div>
             <h1 className="hero-title animate-fade-up delay-100">
-              The <span className="text-gradient">Agentic Ecosystem</span><br />
-              for Modern Teams
+              <span className="text-gradient">Agentic Ecosystem</span><br />
+              [ FOR_MODERN_TEAMS ]
             </h1>
             <p className="hero-description animate-fade-up delay-200">
-              Deploy, monitor, and interact with your AI agents in real-time.
-              Sloppy gives you the ultimate control over your autonomous workflows.
+              Deploy, monitor, and execute auto-routines in real-time.
+              Root terminal access to your autonomous workflows.
             </p>
             <div className="hero-cta animate-fade-up delay-300">
-              <button className="btn btn-primary btn-large hover-lift">Start Deploying</button>
-              <button className="btn btn-secondary btn-large hover-lift">Read Documentation</button>
+              <button className="btn btn-primary btn-large hover-lift">[ DEPLOY_AGENTS ]</button>
+              <button className="btn btn-secondary btn-large hover-lift">[ READ_DOCS ]</button>
             </div>
           </div>
 
@@ -88,15 +91,16 @@ function App() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="features container">
+        <section id="features" className="features container" style={{ position: 'relative' }}>
+          <div className="hud-element" style={{ position: 'absolute', bottom: '0', left: '20px', color: 'var(--text-secondary)', fontSize: '0.75rem', opacity: 0.5 }}>&gt;&gt; DB_CONN: OK // LATENCY: 12ms</div>
           <div className="section-header scroll-animate">
-            <h2 className="section-title">Everything you need</h2>
-            <p className="section-subtitle">Powerful tools built directly into the ecosystem</p>
+            <h2 className="section-title">++ CORE_MODULES</h2>
+            <p className="section-subtitle">OVERRIDE DEFAULT PROTOCOLS WITH BUILT-IN TOOLS</p>
           </div>
 
           <div className="features-grid">
             {[
-              { title: "Real-time Monitoring", desc: "Watch your agents execute tasks as they happen.", icon: "monitoring" },
+              { title: "SYS.MONITOR", desc: "Real-time telemetry of agent execution streams.", icon: "monitoring" },
               { title: "Project Management", desc: "Organize workflows, track progress, and ship faster.", icon: "folder" },
               { title: "Log Analysis", desc: "Deep dive into execution logs with advanced filtering.", icon: "description" },
               { title: "Agent Configuration", desc: "Tweak parameters and system prompts on the fly.", icon: "settings" },
@@ -107,8 +111,9 @@ function App() {
                 <div className="feature-icon-wrapper">
                   <span className="material-symbols-rounded">{feature.icon}</span>
                 </div>
-                <h3 className="feature-title">{feature.title}</h3>
+                <h3 className="feature-title" style={{ textTransform: 'uppercase' }}>&gt; {feature.title}</h3>
                 <p className="feature-desc">{feature.desc}</p>
+                <div style={{ marginTop: 'auto', paddingTop: '16px', fontSize: '0.7rem', color: 'var(--text-secondary)' }}>// ID_{i}</div>
               </div>
             ))}
           </div>
