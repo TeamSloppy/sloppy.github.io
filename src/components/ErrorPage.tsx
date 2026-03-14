@@ -1,5 +1,6 @@
 import { GlitchText } from "./GlitchText/GlitchText";
-import soLogo from "../assets/so_logo.svg";
+
+const soLogo = "/so_logo.svg";
 
 interface ErrorPageProps {
     error?: Error;

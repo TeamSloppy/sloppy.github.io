@@ -1,7 +1,9 @@
 import { useEffect } from 'react'
-import soLogo from './assets/so_logo.svg'
 import './App.css'
 import { NotFoundPage } from './components/NotFoundPage'
+import { HeroDashboardPreview } from './components/HeroDashboardPreview'
+
+const soLogo = '/so_logo.svg'
 
 function App() {
   // Simple intersection observer for scroll animations
@@ -76,23 +78,7 @@ function App() {
 
           {/* Mockup / Dashboard Preview */}
           <div className="hero-image-wrapper animate-fade-up delay-300">
-            <div className="hero-image glass hover-levitate">
-              <div className="window-controls">
-                <span></span><span></span><span></span>
-              </div>
-              <div className="dashboard-skeleton">
-                <div className="skeleton-sidebar"></div>
-                <div className="skeleton-main">
-                  <div className="skeleton-header"></div>
-                  <div className="skeleton-cards">
-                    <div className="skeleton-card"></div>
-                    <div className="skeleton-card"></div>
-                    <div className="skeleton-card"></div>
-                  </div>
-                  <div className="skeleton-chart"></div>
-                </div>
-              </div>
-            </div>
+            <HeroDashboardPreview />
           </div>
         </section>
 
